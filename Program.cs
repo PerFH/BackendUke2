@@ -5,7 +5,11 @@ class Program
     static DateTime time = DateTime.Now;
     static void Main(string[] args)
     {
-    Console.WriteLine(getDay());
+    getDay();
+    //lookupWeatherTemp(whatWeather());
+    todayTemp(
+        lookupWeatherTemp(whatWeather()), 
+        lookupHeatTemp(whatHeat()));
     }
     static Random rng = new Random();
     static string whichGreeting(DateTime time)
@@ -41,15 +45,15 @@ class Program
         }
     }
 
-    string[] weatherType = ["sunny", "cloudy", "rainy"];
-    Dictionary<string, int> weatherDictionary = new()
+    static string[] weatherType = ["sunny", "cloudy", "rainy"];
+    static Dictionary<string, int> weatherDictionary = new()
     {
         {"sunny", 20},
         {"cloudy", 15},
         {"rainy", 10}
     };
-    string[] heatType = ["cold", "windy", "normal", "hot"];
-    Dictionary<string, int> heatDictionary = new()
+    static string[] heatType = ["cold", "windy", "normal", "hot"];
+    static Dictionary<string, int> heatDictionary = new()
     {
         {"cold", -10},
         {"windy", -5},
@@ -79,21 +83,29 @@ static int whatHeat()
     return i;
     }
 
+static string lookupWeatherTemp(int whatWeather)
+    {
+        Console.WriteLine(weatherType[whatWeather]);
+    return weatherType[whatWeather];
+    }
+    
+
+
+static string lookupHeatTemp(int whatHeat)
+    {
+        Console.WriteLine(heatType[whatHeat]);
+        return heatType[whatHeat];
+    }
+
+
+static int todayTemp(string lookupWeatherTemp, string lookupHeatTemp)
+    {
+    int mathTemp = weatherDictionary[lookupWeatherTemp] + heatDictionary[lookupHeatTemp];
+    Console.WriteLine(mathTemp);
+    return mathTemp; 
+    }
+
 /*
-int lookupWeatherTemp(string whatWeather)
-    sjekk hva temp som hører til værtypen i weather dictionary
-    return weatherType.weatherDictionary;
-
-
-int lookupHeatTemp(string whatHeat)
-    sjekk dictionary hva for varmetype det blir
-    return heatType.Heatdictionary
-
-
-int todayTemp(int lookupWeatherTemp, int lookupHeatTemp())
-    mathTemp = lookupWeatherTemp + lookupHeatTemp
-    return mathTemp    
-
 string whatClothes(int todayTemp())
     if (todayTemp x>y)
         return clothes
