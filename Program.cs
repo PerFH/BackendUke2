@@ -48,7 +48,7 @@ class Program
         {"cloudy", 15},
         {"rainy", 10}
     };
-    string[] heatType = ["cold", "normal", "hot"];
+    string[] heatType = ["cold", "windy", "normal", "hot"];
     Dictionary<string, int> heatDictionary = new()
     {
         {"cold", -10},
@@ -67,19 +67,23 @@ static string getDay()
         return input;
         }
     }
-}
-/*
-string whatWeather()
-    rng.weatherType(0-2)
-    return weatherType;
+static int whatWeather()
+    {
+       int i = rng.Next(0,2);
+    return i;
+    }
+static int whatHeat()
+    {
+        
+       int i = rng.Next(0,3);
+    return i;
+    }
 
+/*
 int lookupWeatherTemp(string whatWeather)
     sjekk hva temp som hører til værtypen i weather dictionary
     return weatherType.weatherDictionary;
 
-string whatHeat()
-    rng.heatType(0-2)
-    return heatType;
 
 int lookupHeatTemp(string whatHeat)
     sjekk dictionary hva for varmetype det blir
@@ -98,3 +102,4 @@ void finalOutput()
     ifelse for klesforslag basert på temp ranges
     console: det kommer til å bli en {heatDictionary}, {weatherDictionary} {getDay} og jeg anbefaler {whatClothes}
     */
+}
