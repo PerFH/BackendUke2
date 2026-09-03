@@ -5,6 +5,7 @@ class Program
     static DateTime time = DateTime.Now;
     static void Main(string[] args)
     {
+        Console.Clear();
     finalOutput(
         whatClothes(
             todayTemp(
@@ -19,8 +20,8 @@ class Program
         );
     static void finalOutput(string whatClothes)
         {
-        Console.WriteLine($"Det kommer til å bli {weatherType[whatWeather()]} og {heatType[whatHeat()]}" + 
-        $" {getDay()}, og jeg anbefaler {whatClothes}");
+        Console.WriteLine($"{getDay().Substring(1).ToUpper()} kommer til å bli {weatherType[whatWeather()]} og {heatType[whatHeat()]}" + 
+        $" , og jeg anbefaler {whatClothes}");
         }
     }
     static Random rng = new Random();
