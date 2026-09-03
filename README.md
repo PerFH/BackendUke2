@@ -44,6 +44,9 @@ dictionary med vær og hvilke base temperatur som hører til hver temp
 array med vær modifier
 dictionary med temp modifiers basert på variant
 plukk random plass fra array 1 og array 2, sjekk dictionary hva det betyr for temp, regn ut dagens temp
+sjekk hva for vær det blir
+regn ut total temp
+anbefal klær
 
 modifiser temperatur basert på tiden på dagen
 1. god(tid på dagen) bruker, 
@@ -51,6 +54,7 @@ modifiser temperatur basert på tiden på dagen
     - og anbefaling på hvor godt man burde kle seg
 
 # Pseudocode
+random rng = new random()
 Datetime dato = DateTime.Now;
 
 string[] weatherType = [sunny, cloudy, rainy]
