@@ -37,21 +37,20 @@ Nøkkelfunksjoner å fokusere på: tid/dato, dictionary, arrays
 
 
 # Flow
-lage rng
-hent dato/tid
-array med vær
-dictionary med vær og hvilke base temperatur som hører til hver temp
-array med vær modifier
-dictionary med temp modifiers basert på variant
-plukk random plass fra array 1 og array 2, sjekk dictionary hva det betyr for temp, regn ut dagens temp
-sjekk hva for vær det blir
-regn ut total temp
-anbefal klær
+1. lage rng
+2. hent tid
+3. array med vær
+4. dictionary med vær og hvilke base temperatur som hører til hvert vær
+5. array med temp modifier
+6. dictionary med temp modifiers basert på variant
+7. plukk random plass fra array 1 og array 2, sjekk dictionary hva det betyr for temp
+8. regn ut total temp
+9. anbefal klær
 
-modifiser temperatur basert på tiden på dagen
-1. god(tid på dagen) bruker, 
-    - custom hilsen basert på navn (forbokstav)? (dictionary)
-    - og anbefaling på hvor godt man burde kle seg
+brukererfaring:
+1. hilsen, spør om dag de vil sjekke temp & vær
+2. anbefaling på hvor godt man burde kle seg basert på temp & vær
+
 
 # Pseudocode
 random rng = new random()
