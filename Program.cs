@@ -5,11 +5,23 @@ class Program
     static DateTime time = DateTime.Now;
     static void Main(string[] args)
     {
-    getDay();
-    //lookupWeatherTemp(whatWeather());
-    todayTemp(
-        lookupWeatherTemp(whatWeather()), 
-        lookupHeatTemp(whatHeat()));
+    finalOutput(
+        whatClothes(
+            todayTemp(
+                lookupWeatherTemp(
+                    whatWeather()
+                    ), 
+                    lookupHeatTemp(
+                        whatHeat()
+                    )
+                )
+            )
+        );
+    static void finalOutput(string whatClothes)
+        {
+        Console.WriteLine($"Det kommer til å bli {weatherType[whatWeather()]} og {heatType[whatHeat()]}" + 
+        $" {getDay()}, og jeg anbefaler {whatClothes}");
+        }
     }
     static Random rng = new Random();
     static string whichGreeting(DateTime time)
@@ -45,26 +57,24 @@ class Program
         }
     }
 
-    static string[] weatherType = ["sunny", "cloudy", "rainy"];
+    static string[] weatherType = ["sol", "overskyet", "regnvær"];
     static Dictionary<string, int> weatherDictionary = new()
     {
-        {"sunny", 20},
-        {"cloudy", 15},
-        {"rainy", 10}
+        {"sol", 20},
+        {"overskyet", 15},
+        {"regnvær", 10}
     };
-    static string[] heatType = ["cold", "windy", "normal", "hot"];
+    static string[] heatType = ["kaldt", "vindfullt", "normalt", "varmt"];
     static Dictionary<string, int> heatDictionary = new()
     {
-        {"cold", -10},
-        {"windy", -5},
-        {"normal", 5},
-        {"hot", 10}
+        {"kaldt", -10},
+        {"vindfullt", -5},
+        {"normalt", 5},
+        {"varmt", 10}
     };
 
 static string getDay()
     {
-        
-    while(true)
         {
         Console.WriteLine($"{whichGreeting(time)}! la oss sjekke været, hvilken dag vil du sjekke for?");
         string? input = Console.ReadLine();
@@ -85,7 +95,7 @@ static int whatHeat()
 
 static string lookupWeatherTemp(int whatWeather)
     {
-        Console.WriteLine(weatherType[whatWeather]);
+        //Console.WriteLine(weatherType[whatWeather]);
     return weatherType[whatWeather];
     }
     
@@ -93,7 +103,7 @@ static string lookupWeatherTemp(int whatWeather)
 
 static string lookupHeatTemp(int whatHeat)
     {
-        Console.WriteLine(heatType[whatHeat]);
+        //Console.WriteLine(heatType[whatHeat]);
         return heatType[whatHeat];
     }
 
@@ -101,17 +111,19 @@ static string lookupHeatTemp(int whatHeat)
 static int todayTemp(string lookupWeatherTemp, string lookupHeatTemp)
     {
     int mathTemp = weatherDictionary[lookupWeatherTemp] + heatDictionary[lookupHeatTemp];
-    Console.WriteLine(mathTemp);
+    //Console.WriteLine(mathTemp);
     return mathTemp; 
     }
 
-/*
-string whatClothes(int todayTemp())
-    if (todayTemp x>y)
-        return clothes
+static string whatClothes(int todayTemp)
+    {      
+    switch (todayTemp)
+        {
+        case >=30: return "sommer klær";
+        case >=20: return "normale klær";
+        case >=10: return "varme klær";
+        default: return "vinter klær";
+        }
+    }
 
-void finalOutput()
-    ifelse for klesforslag basert på temp ranges
-    console: det kommer til å bli en {heatDictionary}, {weatherDictionary} {getDay} og jeg anbefaler {whatClothes}
-    */
 }
