@@ -2,12 +2,12 @@
 
 class Program
 {
+    static DateTime time = DateTime.Now;
     static void Main(string[] args)
     {
-        Console.WriteLine(whichGreeting(time));
+    Console.WriteLine(getDay());
     }
     static Random rng = new Random();
-    static DateTime time = DateTime.Now;
     static string whichGreeting(DateTime time)
     {
         string greeting;
@@ -56,15 +56,19 @@ class Program
         {"normal", 5},
         {"hot", 10}
     };
-}
 
-/*
-string getDay()
+static string getDay()
+    {
+        
     while(true)
-        Console.WriteLine($"God{getHilsen} lets check on the weather, which day do you want me to check for?"")
-        readline(input)
-    return input;
-
+        {
+        Console.WriteLine($"{whichGreeting(time)}! la oss sjekke været, hvilken dag vil du sjekke for?");
+        string? input = Console.ReadLine();
+        return input;
+        }
+    }
+}
+/*
 string whatWeather()
     rng.weatherType(0-2)
     return weatherType;
