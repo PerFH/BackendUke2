@@ -100,7 +100,7 @@ string whatClothes(int todayTemp())
     if (todayTemp x>y)
         return clothes
 
-string finalOutput()
+void finalOutput()
     ifelse for klesforslag basert på temp ranges
-    console: It is going to be a {heatDictionary}, {weatherDictionary} {getDay} and i advise you to wear {whatClothes}
+    console: det kommer til å bli en {heatDictionary}, {weatherDictionary} {getDay} og jeg anbefaler {whatClothes}
 
