@@ -1,0 +1,15 @@
+/home/kodehodebruker/Skrivebord/dotnet oppgaver/BackendUke2/bin/Debug/net10.0/BackendUke2
+/home/kodehodebruker/Skrivebord/dotnet oppgaver/BackendUke2/bin/Debug/net10.0/BackendUke2.deps.json
+/home/kodehodebruker/Skrivebord/dotnet oppgaver/BackendUke2/bin/Debug/net10.0/BackendUke2.runtimeconfig.json
+/home/kodehodebruker/Skrivebord/dotnet oppgaver/BackendUke2/bin/Debug/net10.0/BackendUke2.dll
+/home/kodehodebruker/Skrivebord/dotnet oppgaver/BackendUke2/bin/Debug/net10.0/BackendUke2.pdb
+/home/kodehodebruker/Skrivebord/dotnet oppgaver/BackendUke2/obj/Debug/net10.0/BackendUke2.GeneratedMSBuildEditorConfig.editorconfig
+/home/kodehodebruker/Skrivebord/dotnet oppgaver/BackendUke2/obj/Debug/net10.0/BackendUke2.AssemblyInfoInputs.cache
+/home/kodehodebruker/Skrivebord/dotnet oppgaver/BackendUke2/obj/Debug/net10.0/BackendUke2.AssemblyInfo.cs
+/home/kodehodebruker/Skrivebord/dotnet oppgaver/BackendUke2/obj/Debug/net10.0/BackendUke2.csproj.CoreCompileInputs.cache
+/home/kodehodebruker/Skrivebord/dotnet oppgaver/BackendUke2/obj/Debug/net10.0/BackendUke2.sourcelink.json
+/home/kodehodebruker/Skrivebord/dotnet oppgaver/BackendUke2/obj/Debug/net10.0/BackendUke2.dll
+/home/kodehodebruker/Skrivebord/dotnet oppgaver/BackendUke2/obj/Debug/net10.0/refint/BackendUke2.dll
+/home/kodehodebruker/Skrivebord/dotnet oppgaver/BackendUke2/obj/Debug/net10.0/BackendUke2.pdb
+/home/kodehodebruker/Skrivebord/dotnet oppgaver/BackendUke2/obj/Debug/net10.0/BackendUke2.genruntimeconfig.cache
+/home/kodehodebruker/Skrivebord/dotnet oppgaver/BackendUke2/obj/Debug/net10.0/ref/BackendUke2.dll
