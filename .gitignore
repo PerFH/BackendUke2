@@ -6,3 +6,7 @@
 *.out
 *.so
 *.a
+
+/bin
+/obj
+/Properties
