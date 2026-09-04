@@ -20,8 +20,8 @@ class Program
         );
     static void finalOutput(string whatClothes)
         {
-        Console.WriteLine($"{getDay().Substring(1).ToUpper()} kommer til å bli {weatherType[whatWeather()]} og {heatType[whatHeat()]}" + 
-        $" , og jeg anbefaler {whatClothes}");
+        Console.WriteLine($"{getDay()} kommer til å bli {weatherType[whatWeather()]} og {heatType[whatHeat()]}" + 
+        $", og jeg anbefaler {whatClothes}.");
         }
     }
     static Random rng = new Random();
@@ -79,7 +79,8 @@ static string getDay()
         {
         Console.WriteLine($"{whichGreeting(time)}! la oss sjekke været, hvilken dag vil du sjekke for?");
         string? input = Console.ReadLine();
-        return input;
+        string formattedInput = char.ToUpper(input[0]) + input.Substring(1);
+        return formattedInput;
         }
     }
 static int whatWeather()
