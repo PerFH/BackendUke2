@@ -1,0 +1,8 @@
+# Ignore object files
+*.o
+*.obj
+
+# Ignore common Linux executable outputs
+*.out
+*.so
+*.a
