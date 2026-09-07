@@ -3,6 +3,7 @@
 class Program
 {
     static DateTime time = DateTime.Now;
+    static int mathTemp;
     static void Main(string[] args)
     {
         Console.Clear();
@@ -20,7 +21,7 @@ class Program
         );
     static void finalOutput(string whatClothes)
         {
-        Console.WriteLine($"{getDay()} kommer til å bli {todayTemp(lookupWeatherTemp(whatWeather()), lookupHeatTemp(whatHeat()))}°C, " + 
+        Console.WriteLine($"{getDay()} kommer til å bli {mathTemp}°C, " + 
         $"{weatherType[whatWeather()]} og {heatType[whatHeat()]}, jeg anbefaler {whatClothes}.");
         }
     }
@@ -112,7 +113,7 @@ static string lookupHeatTemp(int whatHeat)
 
 static int todayTemp(string lookupWeatherTemp, string lookupHeatTemp)
     {
-    int mathTemp = weatherDictionary[lookupWeatherTemp] + heatDictionary[lookupHeatTemp];
+    mathTemp = weatherDictionary[lookupWeatherTemp] + heatDictionary[lookupHeatTemp];
     //Console.WriteLine(mathTemp);
     return mathTemp; 
     }
