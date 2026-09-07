@@ -1,4 +1,4 @@
-﻿namespace BackendUke2;
+﻿ namespace BackendUke2;
 
 class Program
 {
@@ -20,8 +20,8 @@ class Program
         );
     static void finalOutput(string whatClothes)
         {
-        Console.WriteLine($"{getDay()} kommer til å bli {weatherType[whatWeather()]} og {heatType[whatHeat()]}" + 
-        $", og jeg anbefaler {whatClothes}.");
+        Console.WriteLine($"{getDay()} kommer til å bli {todayTemp(lookupWeatherTemp(whatWeather()), lookupHeatTemp(whatHeat()))}°C, " + 
+        $"{weatherType[whatWeather()]} og {heatType[whatHeat()]}, jeg anbefaler {whatClothes}.");
         }
     }
     static Random rng = new Random();
@@ -77,7 +77,7 @@ class Program
 static string getDay()
     {
         {
-        Console.WriteLine($"{whichGreeting(time)}! la oss sjekke været, hvilken dag vil du sjekke for?");
+        Console.WriteLine($"{whichGreeting(time)}! La oss sjekke været, hvilken dag vil du sjekke for?");
         string? input = Console.ReadLine();
         string formattedInput = char.ToUpper(input[0]) + input.Substring(1);
         return formattedInput;
